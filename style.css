@@ -1,0 +1,409 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+
+:root
+{
+    --white : #fff;
+    --black : #000;
+    --blue : #2C2546;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    background-color: var(--black);
+    color: var(--white);
+    height: 100vh;
+}
+
+header
+{
+    z-index: 9999;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2C2546;
+    box-shadow: 0 5px 25px rgb( 0 0 0 / 20%);
+    padding: 0 100px;
+    transition: 0.6s;
+}
+
+header .logo{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+header .navigation{
+    position: relative;
+    line-height: 70px;
+}
+
+header .navigation .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    user-select: none;
+}
+
+.menu-item >a{
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+    margin: 20px;
+    padding: 25px 0;
+}
+
+.menu-item >a:hover{
+    color: #06D85F;
+    transition: 0.3s;
+}
+
+/*slider*/
+
+.slider{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.swiper{
+    width: 80%;
+    height: fit-content;
+}
+
+.swiper-slide img{
+    width: 100%;
+    border-radius: 2%;
+}
+
+.swiper .swiper-button-prev, .swiper .swiper-button-next{
+    color: #fff;
+    size: 10%;
+}
+
+.swiper .swiper-pagination-bullet-active{
+    background: #fff;
+}
+
+/*Daftar Harga*/
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 12px;
+}
+
+.overlay:target 
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup 
+{
+    margin: 70px auto;
+    padding: 20px;
+    background: var(--dark-blue);
+    border-radius: 5px;
+    width: 50%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+  
+.popup h2 {
+    margin-top: 0;
+    color: var(--white);
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.popup .close:hover 
+{
+    color: #06D85F;
+}
+
+/*Konten*/
+
+.content 
+{
+    max-height: 30%;
+    width: 50%;
+}
+
+.title-p
+{
+    margin-left: 75px;
+    margin-top: 5%;
+    padding: 10px;
+    color: #ffffff;
+}
+
+.populer
+{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 90%;
+    margin: 7%;
+    margin-top: 2%;
+}
+
+.populer img
+{
+    border-radius: 10%;
+    width: 70%;
+    margin-top: 10%;
+}
+
+.harga{
+    color: #06D85F;
+}
+
+.link a{
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.link a:hover{
+    color: #06D85F;
+}
+
+/*Pesan*/
+
+/*.pesan{
+    background-color: #06D85F;
+    padding: 5%;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pesan:hover {
+    background-color: #ffffff;
+}
+
+.pesan img{
+ width: 25px;
+}*/
+
+/*Tentang*/
+
+.tentang
+{
+    display: grid;
+    justify-content: center;
+    margin-top: 10%;
+    font-size: 15pt;
+    margin-bottom: 5%;
+}
+ 
+.card
+{
+    background-color: var(--blue);
+    padding: 5%;
+    border-radius: 10px;
+    box-shadow: 10px 10px rgb(0, 0, 0);
+}
+ 
+.card h1
+{
+    text-align: center;
+}
+
+.card a{
+    color: #06D85F;
+}
+ 
+html
+{
+    scroll-behavior: smooth;
+}
+
+footer{
+    background-color: var(--blue);
+    font-family: 'Poppins', sans-serif;
+}
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+.socialicons{
+    display: flex;
+    justify-content: center;
+}
+.socialicons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialicons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+/*Hover Icon*/
+
+.socialicons a:hover{
+    background-color: #222;
+    transition: 0.2s;
+}
+.socialicons a i:hover{
+    color: white;
+    transition: 0.2s;
+}
+
+.footernav{
+    margin: 30px 0;
+}
+.footernav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footernav ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    opacity: 0.7s;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.footernav ul li a:hover{
+    color: #06D85F;
+}
+
+.footereBottom{
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.footereBottom p{
+    color: white;
+}
+
+.designer{
+    opacity: 0.7;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0 5px;
+}
+
+@media screen and (max-width: 600px){
+
+    header{
+        font-size: 10px;
+        padding: 0 40px;
+    }
+
+    .logo{
+        height: 20px;
+        width: 50px;
+    }
+
+    header .navigation{
+        line-height: 50px;
+        display: flex;
+
+    }
+
+    .slider{
+        margin-top: 80px;
+    }
+
+    .menu-item >a{
+        padding: 25% 0;
+        margin: 15px;
+    }
+
+    .title-p{
+        padding-top: 2rem;
+        margin-left: 35px;
+        font-size: 15pt;
+
+    }
+    .populer{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin-left: 10%;
+        margin-top: 2%;
+        margin-bottom: 0;
+    }
+
+    .populer img{
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+
+    .populer .judul-produk{
+        padding-left: 0px;
+    }
+
+    .link a{
+        font-size: 13px;
+    }
+
+    .link img{
+        width: 70%;
+    }
+
+    .tentang
+    {
+        display: grid;
+        justify-content: center;
+        margin: 10%;
+        font-size: 10pt;
+    }
+    .footer{
+        height: 20%;
+    }
+    .footernav ul{
+        flex-direction: column;
+    }
+
+    .footernav ul li{
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+}
